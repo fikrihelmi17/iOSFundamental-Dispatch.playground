@@ -1,5 +1,9 @@
 import UIKit
 
+<<<<<<< Updated upstream
+=======
+// dokumentasi 
+>>>>>>> Stashed changes
 
 //dispatchBarrier
 class ThreadSafeArray {
