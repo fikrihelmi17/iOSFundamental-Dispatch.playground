@@ -1,5 +1,6 @@
 import UIKit
 
+// ini adalah versi dokumentasi dari project ini
 
 //dispatchBarrier
 class ThreadSafeArray {
@@ -7,7 +8,9 @@ class ThreadSafeArray {
     
     private var _array: [Int] = []
     
+    //closure
     var array: [Int] {
+        // menggunakan get set
         get {
             return isolation.sync{
                 _array
@@ -28,6 +31,7 @@ let workItem = DispatchWorkItem{
     value += 5
 }
 
+//perform
 workItem.perform()
 
 let queue = DispatchQueue(label: "com.fikrihelmi.dispatchworkitem", qos: .utility)
@@ -42,6 +46,7 @@ workItem.notify(queue: DispatchQueue.main){
 func task1(dispatchGroup: DispatchGroup) {
     let queue = DispatchQueue(label: "com.fikrihelmi.dispatchGroup.task1")
     
+    //asyncronous
     queue.async {
         sleep(1)
         print("Task 1 executed")
