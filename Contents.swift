@@ -1,5 +1,6 @@
 import UIKit
 
+// dokumentasi
 
 //dispatchBarrier
 class ThreadSafeArray {
@@ -7,7 +8,9 @@ class ThreadSafeArray {
     
     private var _array: [Int] = []
     
+    //closure
     var array: [Int] {
+        //get set
         get {
             return isolation.sync{
                 _array
@@ -28,6 +31,7 @@ let workItem = DispatchWorkItem{
     value += 5
 }
 
+//perform
 workItem.perform()
 
 let queue = DispatchQueue(label: "com.fikrihelmi.dispatchworkitem", qos: .utility)
