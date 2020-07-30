@@ -43,9 +43,12 @@ workItem.notify(queue: DispatchQueue.main){
 
 
 //dispatchGroup
+
+//task 1
 func task1(dispatchGroup: DispatchGroup) {
     let queue = DispatchQueue(label: "com.fikrihelmi.dispatchGroup.task1")
     
+    //asyncronous
     queue.async {
         sleep(1)
         print("Task 1 executed")
@@ -53,6 +56,7 @@ func task1(dispatchGroup: DispatchGroup) {
     }
 }
 
+//task2
 func task2(dispatchGroup: DispatchGroup) {
     DispatchQueue.global().async {
         sleep(2)
@@ -61,6 +65,7 @@ func task2(dispatchGroup: DispatchGroup) {
     }
 }
  
+//task3
 func task3(dispatchGroup: DispatchGroup) {
     DispatchQueue.main.async {
         print("Task 3 executed")
